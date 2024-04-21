@@ -105,8 +105,7 @@ QUERY can be passed optionally to avoid the prompt."
                    (completing-read prompt results nil t))))
         (if (not file)
             (message "Fasd found nothing for query `%s'" query)
-            (unless (featurep 'ivy)
-              (fasd-find-file-action file))))))
+          (fasd-find-file-action file)))))
 
 ;;;###autoload
 (defun fasd-add-file-to-db ()
